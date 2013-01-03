@@ -3,6 +3,7 @@
 import sys, serial, time, os, socket
 from time import sleep
 from random import randint
+from subprocess import Popen
 import pandoraUtils
 import pickle
 import RPi.GPIO as GPIO
@@ -154,11 +155,30 @@ def main():
 
 			parseAndWrite(2)
 
-		if ( GPIO.input(4) == False  and current_screen == "menupg2"):
+		# if ( GPIO.input(4) == False  and current_screen == "menupg2"):
 
-			pandoraUtils.log('Button 6 - Menu - Sub 3 - Shutdown')
-			pandoraUtils.writeToLCD("Shutting Down", "Thanks")
-			os.system('echo "q" >> ' + fifo_folder_location)
+		# 	pandoraUtils.log('Button 6 - Menu - Sub 3 - Shutdown')
+		# 	pandoraUtils.writeToLCD("Shutting Down", "Thanks")
+		# 	pianobarProcess.terminate()
+		# 	# os.system('echo "q" >> ' + fifo_folder_location)
+
+		# 	sleep(2)
+
+		# 	pandoraUtils.writeToLCD("Pandora Pi: OFF", "1: Turn ON")
+		# 	current_screen = "off"
+
+		# if ( GPIO.input(2) == False  and current_screen == "off"):
+
+		# 	pianobarProcess = Popen('sudo -u pi pianobar', shell=True)
+
+		# 	PandoraUtils.writeToLCD("Pandora Pi", "Starting")
+			
+		# 	current_screen = "default"
+
+		# 	sleep(4)
+	
+		# 	pandoraUtils.parseAndWrite()
+
 
 		sleep(.25)
 
