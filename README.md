@@ -48,6 +48,7 @@ BASH script ran on launch. This script validates that the python scripts only la
 Whats Needed
 ============
 
+- Scan for WiFi and connect via the menu
 - Better menu control
 - A way to page through stations and not pick a random one (stations are stroed in the pickle file already)
 - A way to start and stop Pianobar from the Python script so you can turn the streamer off/on without powering off the Pi.
